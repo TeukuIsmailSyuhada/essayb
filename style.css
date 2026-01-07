@@ -64,90 +64,85 @@ img {
     padding: 0 2rem;
 }
 
-/* Header & Navigation */
+/* Navigation - Side Floating Menu */
 header {
     background: var(--glass);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(24px);
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 70px;
+    height: auto;
+    max-height: 80vh;
+    padding: 2rem 0;
+    border-radius: 35px;
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    box-shadow: 0 20px 50px rgba(6, 78, 59, 0.1);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header:hover {
+    width: 200px;
 }
 
 nav {
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.logo-text {
-    font-weight: 800;
-    font-size: 1.2rem;
-    color: var(--secondary);
-    line-height: 1.1;
-}
-
-.logo-text span {
-    color: var(--primary);
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 500;
+    width: 100%;
 }
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 10px;
+}
+
+.nav-links li {
+    width: 100%;
 }
 
 .nav-links a {
-    font-weight: 600;
-    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 12px;
+    border-radius: 18px;
     color: var(--text-muted);
-    position: relative;
+    font-weight: 600;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.nav-links a span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+header:hover .nav-links a span {
+    opacity: 1;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--primary);
-}
-
-.nav-links a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    height: 2px;
     background: var(--primary);
-    border-radius: 2px;
-}
-
-.btn-cta {
-    background: var(--secondary);
     color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: var(--transition);
 }
 
-.btn-cta:hover {
-    background: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(225, 25, 0, 0.3);
+.logo,
+.btn-cta {
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 0 110px;
+    /* Offset for sidebar */
 }
 
 /* Hero Section */
@@ -319,44 +314,48 @@ nav {
     margin-top: 0.5rem;
 }
 
-/* About Grid */
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.info-card {
-    background: white;
-    padding: 2.5rem 2rem;
-    border-radius: var(--border-radius);
-    text-align: center;
+/* About Unified Dashboard Box */
+.about-unified-box {
+    background: var(--bg-white);
+    border-radius: 35px;
+    padding: 4rem;
     box-shadow: var(--shadow);
-    transition: var(--transition);
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(16, 185, 129, 0.05);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.info-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary);
+.about-unified-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: var(--primary-light);
+    clip-path: circle(50% at 100% 0);
+    opacity: 0.4;
 }
 
-.info-card.active {
-    border: 2px solid var(--primary);
+.unified-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.info-card span {
+.unified-item span {
     color: var(--primary);
     text-transform: uppercase;
-    font-size: 0.75rem;
     font-weight: 800;
-    letter-spacing: 1px;
-    display: block;
-    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
 }
 
-.info-card h3 {
-    font-size: 1.5rem;
+.unified-item h3 {
+    font-size: 1.8rem;
     color: var(--secondary);
 }
 

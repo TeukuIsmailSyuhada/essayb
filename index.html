@@ -11,6 +11,8 @@
     <link rel="icon" type="image/png"
         href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Logo_Telkom_University_Surabaya.png/600px-Logo_Telkom_University_Surabaya.png">
     <!-- Custom CSS -->
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -18,32 +20,37 @@
 
 <body>
 
-    <!-- Header -->
+    <!-- Unified Sidebar Navigation -->
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Logo_Telkom_University_Surabaya.png/600px-Logo_Telkom_University_Surabaya.png"
-                        alt="Telkom University Logo">
-                    <div class="logo-text">
-                        Telkom <span>University Surabaya</span>
-                    </div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#lecturer">Lecturer</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#essays">Essays</a></li>
-                </ul>
-                <a href="#essays" class="btn-cta">View Essays</a>
-            </nav>
-        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+                <li><a href="#lecturer"><i class="fas fa-chalkboard-teacher"></i> <span>Lecturer</span></a></li>
+                <li><a href="#team"><i class="fas fa-users"></i> <span>Team</span></a></li>
+                <li><a href="#essays"><i class="fas fa-file-alt"></i> <span>Essays</span></a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <!-- Branding Bar -->
+        <div class="container">
+            <div style="padding: 2rem 0; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Logo_Telkom_University_Surabaya.png/600px-Logo_Telkom_University_Surabaya.png"
+                        alt="Logo" style="height: 45px;">
+                    <div style="font-weight: 800; color: var(--secondary); line-height: 1.1;">
+                        Telkom <span
+                            style="display: block; color: var(--primary); font-size: 0.8rem; font-weight: 500;">University
+                            Surabaya</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Hero Section -->
-        <section id="home" class="hero">
+        <section id="home" class="hero" style="padding: 100px 0;">
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content">
@@ -85,20 +92,20 @@
                     <span>Course Overview</span>
                     <h2>Project Context</h2>
                 </div>
-                <div class="about-grid">
-                    <div class="info-card">
+                <div class="about-unified-box">
+                    <div class="unified-item">
                         <span>Course</span>
                         <h3>English II</h3>
                     </div>
-                    <div class="info-card">
+                    <div class="unified-item">
                         <span>Institution</span>
                         <h3>Telkom University Surabaya</h3>
                     </div>
-                    <div class="info-card active">
+                    <div class="unified-item">
                         <span>Academic Year</span>
                         <h3>2025/2026</h3>
                     </div>
-                    <div class="info-card">
+                    <div class="unified-item">
                         <span>Semester</span>
                         <h3>5th Semester</h3>
                     </div>
