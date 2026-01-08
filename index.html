@@ -13,6 +13,9 @@
     <!-- Custom CSS -->
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -89,22 +92,22 @@
                 </div>
                 <div class="about-unified-box">
                     <div class="unified-item">
-                        <i class="fas fa-book-open"></i>
+                        <div class="icon-box"><i class="fas fa-book-open"></i></div>
                         <span>Course</span>
                         <h3>English II</h3>
                     </div>
                     <div class="unified-item">
-                        <i class="fas fa-university"></i>
+                        <div class="icon-box"><i class="fas fa-university"></i></div>
                         <span>Institution</span>
                         <h3>Telkom University Surabaya</h3>
                     </div>
                     <div class="unified-item">
-                        <i class="fas fa-calendar-alt"></i>
+                        <div class="icon-box"><i class="fas fa-calendar-alt"></i></div>
                         <span>Academic Year</span>
                         <h3>2025/2026</h3>
                     </div>
                     <div class="unified-item">
-                        <i class="fas fa-layer-group"></i>
+                        <div class="icon-box"><i class="fas fa-layer-group"></i></div>
                         <span>Semester</span>
                         <h3>5th Semester</h3>
                     </div>
@@ -117,19 +120,19 @@
             <div class="container">
                 <div class="lecturer-card">
                     <div class="lecturer-img-wrapper">
-                        <i class="fas fa-quote-left"></i>
                         <div class="lecturer-img-creative">
                             <img src="LECTURERENGGLISS.png" alt="Alda Dea Delfina">
                         </div>
                     </div>
                     <div class="lecturer-content-creative">
                         <h2>Alda Dea Delfina</h2>
+                        <span class="lecturer-subtitle">Lecturer of English II</span>
                         <div class="lecturer-details-list">
                             <div class="degree">
                                 <span>S.Pd.</span>
                                 <span>M.TESOL</span>
                             </div>
-                            <div class="position">Lecturer of English II</div>
+                            <div class="position">Lecturer Coordinator</div>
                             <div class="institution">Telkom University Surabaya</div>
                         </div>
                     </div>
@@ -433,8 +436,11 @@
         ScrollReveal().reveal('.hero-content', { delay: 200, origin: 'left', distance: '100px', duration: 1000 });
         ScrollReveal().reveal('.hero-image', { delay: 400, origin: 'right', distance: '100px', duration: 1000 });
         ScrollReveal().reveal('.section-title', { delay: 100, origin: 'bottom', distance: '50px', duration: 800 });
-        ScrollReveal().reveal('.unified-item', { delay: 200, interval: 100, origin: 'bottom', distance: '50px', duration: 800 });
-        ScrollReveal().reveal('.lecturer-card', { delay: 300, origin: 'bottom', distance: '80px', duration: 1000 });
+        ScrollReveal().reveal('.unified-item', { delay: 200, interval: 100, origin: 'bottom', distance: '50px', duration: 1000 });
+        ScrollReveal().reveal('.icon-box', { delay: 400, interval: 100, scale: 0.5, duration: 800 });
+        ScrollReveal().reveal('.lecturer-card', { delay: 300, origin: 'bottom', distance: '80px', duration: 1200 });
+        ScrollReveal().reveal('.lecturer-img-wrapper', { delay: 500, origin: 'left', distance: '100px', duration: 1200 });
+        ScrollReveal().reveal('.lecturer-content-creative', { delay: 700, origin: 'right', distance: '50px', duration: 1200 });
         ScrollReveal().reveal('.author-item', { delay: 200, interval: 150, origin: 'bottom', distance: '100px', scale: 0.9, duration: 1000 });
         ScrollReveal().reveal('.essay-card', { delay: 200, interval: 150, origin: 'bottom', distance: '100px', duration: 1000 });
 
